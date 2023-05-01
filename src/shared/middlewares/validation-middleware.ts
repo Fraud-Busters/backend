@@ -29,11 +29,7 @@ export const validationMiddleware = <T extends ClassConstructor<any>>(
         const key = err.context?.key;
 
         if (key) {
-          const newKey = StringUtil.isString(key)
-            ? StringUtil.snakeCase(key)
-            : key;
-
-          details.push(err.message.replace(key, newKey));
+          details.push(err.message);
         }
       });
 
