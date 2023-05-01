@@ -15,7 +15,7 @@ npm install
 
 ### Set environment
 
-Create a new file named ".env" in the current working directory and then fill in the environment variables
+Create a new file named `.env` in the current working directory and then fill in the environment variables
 
 ### Run mysql server
 
