@@ -5,6 +5,6 @@ export class LoginBodyDto {
   @JoiSchema(Joi.string().min(3).required())
   readonly username: string;
 
-  @JoiSchema(Joi.number().integer().min(1).max(5).required())
+  @JoiSchema(Joi.string().string().min(8).max(50).required())
   readonly password: number;
 }

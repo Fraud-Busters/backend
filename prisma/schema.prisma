@@ -6,35 +6,3 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
-
-model hospital {
-  id                String    @id @db.Char(36)
-  name              String    @db.VarChar(255)
-  contact           String    @db.VarChar(255)
-  postalCode        String    @db.VarChar(255)
-  address           String    @db.VarChar(255)
-  addressDetail     String    @db.Text
-  regNo             String    @db.VarChar(255)
-  licenseNo         String    @db.VarChar(255)
-  ceoName           String    @db.VarChar(255)
-  ceoPhone          String    @db.VarChar(255)
-  managerPhone      String    @db.VarChar(255)
-  details           String    @db.Text
-  createdAt         DateTime  @default(now()) @db.DateTime(0)
-  deletedAt         DateTime? @db.DateTime(0)
-  refundName        String    @db.VarChar(255)
-  refundBankName    String    @db.VarChar(255)
-  refundBankAccount String    @db.VarChar(255)
-}
-
-model knex_migrations {
-  id             Int      @id @default(autoincrement()) @db.UnsignedInt
-  name           String?  @db.VarChar(255)
-  batch          Int?
-  migration_time DateTime @default(now()) @db.Timestamp(0)
-}
-
-model knex_migrations_lock {
-  index     Int  @id @default(autoincrement()) @db.UnsignedInt
-  is_locked Int?
-}
