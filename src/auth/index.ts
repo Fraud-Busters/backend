@@ -1,3 +1,3 @@
-import { loginRouter } from './routers';
+import { loginRouter, logoutRouter, refreshTokenRouter } from './routers';
 
-export const authRouters = [loginRouter];
+export const authRouters = [loginRouter, refreshTokenRouter, logoutRouter];

@@ -13,6 +13,7 @@ const envVarsSchema = joi
     PORT: joi.number().positive().required(),
     JWT_ACCESS_SECRET: joi.string().required(),
     JWT_REFRESH_SECRET: joi.string().required(),
+    ORIGIN: joi.string().uri().required(),
   })
   .unknown();
 
@@ -30,4 +31,5 @@ export const config = {
   isProduction: envVars.NODE_ENV === 'production',
   jwtAccessSecret: envVars.JWT_ACCESS_SECRET,
   jwtRefreshSecret: envVars.JWT_REFRESH_SECRET,
+  origin: envVars.ORIGIN,
 };

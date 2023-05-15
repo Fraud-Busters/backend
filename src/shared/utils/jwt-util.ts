@@ -22,4 +22,11 @@ export class JwtUtil {
   static verifyRefreshToken(token: string) {
     return jwt.verify(token, config.jwtRefreshSecret) as IJwtPayload;
   }
+
+  static generateTokens(payload: IJwtPayload) {
+    return {
+      accessToken: this.generateAccessToken(payload),
+      refreshToken: this.generateRefreshToken(payload),
+    };
+  }
 }

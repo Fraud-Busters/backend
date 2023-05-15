@@ -4,7 +4,7 @@ import type { Knex } from 'knex';
 config();
 
 const knexConfig: Knex.Config = {
-  client: 'mysql',
+  client: 'pg',
   connection: process.env.DATABASE_URL,
   migrations: {
     tableName: 'knex_migrations',

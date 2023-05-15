@@ -2,9 +2,9 @@ import { JoiSchema } from 'joi-class-decorators';
 import { Joi } from '../../shared/libs';
 
 export class LoginBodyDto {
-  @JoiSchema(Joi.string().min(3).required())
+  @JoiSchema(Joi.string().required())
   readonly username: string;
 
-  @JoiSchema(Joi.string().string().min(8).max(50).required())
-  readonly password: number;
+  @JoiSchema(Joi.string().required())
+  readonly password: string;
 }
