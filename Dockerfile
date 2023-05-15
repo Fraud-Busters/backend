@@ -2,7 +2,6 @@ FROM node:lts-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
-RUN npx prisma generate
 COPY . .
 RUN npm run build
 
@@ -12,4 +11,5 @@ COPY package* ./
 RUN npm i --only=production
 COPY --from=builder ./app/dist ./dist
 EXPOSE 8000
+RUN npx prisma generate
 CMD ["npm", "start"]
