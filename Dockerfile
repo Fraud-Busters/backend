@@ -10,6 +10,6 @@ WORKDIR /app
 COPY package* ./
 RUN npm i --only=production
 COPY --from=builder ./app/dist ./dist
-COPY --from=builder ./app/prisma ./dist/prisma
+COPY --from=builder ./app/prisma ./prisma
 EXPOSE 8000
 CMD ["npm", "start"]
