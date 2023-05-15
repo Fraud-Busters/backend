@@ -2,8 +2,7 @@ FROM node:lts-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
-COPY ./prisma prisma
-COPY ./src src
+COPY . .
 RUN npm run build
 
 FROM node:lts-alpine AS server
