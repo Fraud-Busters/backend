@@ -13,7 +13,7 @@ loginRouter.post(
       const { accessToken, refreshToken, user } = await login(req.body);
       res.cookie('refreshToken', refreshToken, {
         httpOnly: true,
-        sameSite: 'none',
+        sameSite: 'strict',
         secure: true,
         maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
       });
