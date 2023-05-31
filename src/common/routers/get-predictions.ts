@@ -2,7 +2,6 @@ import express, { NextFunction, Response } from 'express';
 import { authMiddleware } from '../../shared/middlewares';
 import { IAuthRequest } from '../../shared/interfaces';
 import { Prediction } from '../../models';
-import { logger } from '../../shared/libs';
 const router = express.Router();
 
 router.get(
