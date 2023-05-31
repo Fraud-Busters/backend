@@ -39,7 +39,7 @@ export const config = {
   origin: envVars.ORIGIN,
   gcp: {
     projectId: envVars.GCP_PROJECT_ID,
-    privateKey: envVars.GCP_PRIVATE_KEY,
+    privateKey: envVars.GCP_PRIVATE_KEY.replace(/\\n/g, '\n'),
     clientEmail: envVars.GCP_CLIENT_EMAIL,
     bucketName: envVars.GCP_BUCKET_NAME,
   },

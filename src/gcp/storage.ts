@@ -4,7 +4,7 @@ import { config } from '../shared/config';
 const storage = new Storage({
   projectId: config.gcp.projectId,
   credentials: {
-    private_key: config.gcp.privateKey.split(String`\n`).join('\n'),
+    private_key: config.gcp.privateKey,
 
     client_email: config.gcp.clientEmail,
   },
