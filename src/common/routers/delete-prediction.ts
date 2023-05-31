@@ -28,10 +28,12 @@ router.delete(
       const inKey = prediction.inKey;
       const outKey = prediction.outKey;
 
-      await deleteFile(inKey);
-      if (!!outKey) {
-        await deleteFile(outKey);
-      }
+      try {
+        await deleteFile(inKey);
+        if (!!outKey) {
+          await deleteFile(outKey);
+        }
+      } catch {}
 
       await prediction.deleteOne();
 
