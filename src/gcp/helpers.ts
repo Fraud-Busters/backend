@@ -55,7 +55,7 @@ export const uploadFile = (file: Express.Multer.File, username: string) =>
         reject(`Unable to upload csv, something went wrong`);
       })
       .end(buffer, async () => {
-        console.log('end');
+        // console.log('end');
       });
   });
 
