@@ -7,9 +7,10 @@ import { authRouters } from './auth';
 import { API_PREFIX } from './shared/constants';
 import cookieParser from 'cookie-parser';
 import { config } from './shared/config';
+import { commonRouters } from './common';
 
 const app = express();
-const routers = [...authRouters];
+const routers = [...authRouters, ...commonRouters];
 
 app.set('trust proxy', true);
 app.use(
