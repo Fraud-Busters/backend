@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { HttpError } from '../errors';
+import { logger } from '../libs';
 
 export const errorMiddleware = (
   err: HttpError,
@@ -7,6 +8,7 @@ export const errorMiddleware = (
   res: Response,
   _next: NextFunction
 ) => {
+  logger.error(err);
   const status = err.status || 500;
   const response = err.response ?? {
     ok: false,
