@@ -2,6 +2,7 @@ import {
   deletePredictionRouter,
   downloadResultRouter,
   getPredictionsRouter,
+  getPredictionsStreamRouter,
   uploadRouter,
 } from './routers';
 
@@ -10,4 +11,5 @@ export const commonRouters = [
   getPredictionsRouter,
   deletePredictionRouter,
   downloadResultRouter,
+  getPredictionsStreamRouter,
 ];
