@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a backend system developed using Express.js, TypeScript, Prisma, PostgreSQL, MongoDB, and Cloud Storage. It provides a set of endpoints for managing user data, storing predictions in MongoDB, and utilizing cloud storage to store CSV files for analysis and prediction using machine learning.
+The project is a backend system developed using Express.js, TypeScript, Prisma, PostgreSQL, MongoDB, and cloud storage. It allows users to store user data in PostgreSQL, store prediction results in MongoDB, and store CSV files in cloud storage for analysis. The application runs on Node.js with a minimum version of 18, and it requires PostgreSQL version 15. Users need to create a bucket in the cloud storage and generate a service account with the Storage Admin role. These details are necessary to populate the environment variables.
 
 ## Prerequisites
 
@@ -39,10 +39,10 @@ npm install
    - `JWT_REFRESH_SECRET`: Secret key for JWT refresh tokens.
    - `DATABASE_URL`: URL for connecting to your PostgreSQL database.
    - `ORIGIN`: Allowed origin for CORS.
-   - `GCP_PRIVATE_KEY`: Private key for Google Cloud Platform.
-   - `GCP_CLIENT_EMAIL`: Client email for Google Cloud Platform.
-   - `GCP_PROJECT_ID`: Project ID for Google Cloud Platform.
-   - `GCP_BUCKET_NAME`: Bucket name for Google Cloud Platform storage.
+   - `GCP_PRIVATE_KEY`: The private key for the service account used for cloud storage access.
+   - `GCP_CLIENT_EMAIL`: The email address associated with the service account.
+   - `GCP_PROJECT_ID`: The project ID associated with the service account.
+   - `GCP_BUCKET_NAME`: The name of the bucket created in the cloud storage.
    - `MONGO_URI`: URI for connecting to your MongoDB database.
 
 ## Database Setup
