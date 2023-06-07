@@ -8,6 +8,8 @@ The project is a backend system developed using Express.js, TypeScript, Prisma, 
 
 - Node.js version 18 or higher
 - PostgreSQL version 15 or higher
+- Create a Cloud Storage Bucket: Create a bucket in your cloud storage provider (e.g., Google Cloud Storage, Amazon S3) where the application will store CSV files. Make a note of the bucket name as you'll need it later.
+- Create a Service Account: Create a service account in your cloud storage provider with the necessary permissions to access and manage the created bucket. This will allow the application to interact with the cloud storage.
 
 ## Installation
 
