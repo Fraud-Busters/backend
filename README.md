@@ -175,9 +175,7 @@ To access the protected endpoints, include the access token in the `Authorizatio
    }
    ```
 
-2. `DELETE /api/v1
-
-/predictions/:id`
+2. `DELETE /api/v1/predictions/:id`
 
 Use this endpoint to delete a prediction result with a specific ID.
 
