@@ -4,7 +4,7 @@ export const multerMiddleware = multer({
   storage: multer.memoryStorage(),
   limits: {
     // no larger than 500mb.
-    fileSize: 500 * 1024 * 1024,
+    fileSize: 1000 * 1024 * 1024 * 5,
   },
   fileFilter: (_req, file, cb) => {
     const filetypes = /csv/;
